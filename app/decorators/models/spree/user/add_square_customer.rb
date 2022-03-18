@@ -5,5 +5,5 @@ module Spree::User::AddSquareCustomer # rubocop:disable Style/ClassAndModuleChil
     base.has_one :square_customer, class_name: 'SolidusSquare::Customer'
   end
 
-  Spree::User.prepend(self)
+  Spree.user_class.prepend(self)
 end
